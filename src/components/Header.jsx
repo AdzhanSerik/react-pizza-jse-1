@@ -1,11 +1,10 @@
-import logo from '/logo.svg'
 import cart from '/cart.svg'
 
 export default function Header() {
     return (
         <div className="header flex items-center justify-between">
             <div className='flex items-center gap-4'>
-                <img src={logo} alt="" />
+                <img src="/logo.svg" alt="" />
                 <div>
                     <h1 className='text-2xl font-bold'>React Pizza</h1>
                     <p className='text-gray-500'>самая вкусная пицца во вселенной</p>

@@ -11,9 +11,9 @@ export default function Header() {
                     <p className='text-gray-500'>самая вкусная пицца во вселенной</p>
                 </div>
             </div>
-            <div className='bg-orange-500 flex gap-5 items-center justify-center p-4 rounded-full'>
+            <div className='bg-orange-500 flex gap-3 items-center justify-center py-2 px-6 rounded-full text-white'>
                 <span>520тг</span>
-                <hr />
+                <hr className='w-0.5 h-6 bg-orange-300 border-none rounded-xl' />
                 <div>
                     <img src={cart} alt="" />
                 </div>

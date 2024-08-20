@@ -1,6 +1,7 @@
 import cart from '/cart.svg'
 
 export default function Header() {
+
     return (
         <div className="header flex items-center justify-between">
             <div className='flex items-center gap-4'>
@@ -11,7 +12,7 @@ export default function Header() {
                 </div>
             </div>
             <div className='bg-orange-500 flex gap-3 items-center justify-center py-2 px-6 rounded-full text-white'>
-                <span>520тг</span>
+                <span className='font-bold'>570 тг</span>
                 <hr className='w-0.5 h-6 bg-orange-300 border-none rounded-xl' />
                 <div>
                     <img src={cart} alt="" />

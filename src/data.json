@@ -1,5 +1,4 @@
-{
-  "pizzas": [
+[
     {
       "id": 1,
       "imageUrl": "/pizzas/1.svg",
@@ -81,4 +80,3 @@
       "rating": 10
     }
   ]
-}

@@ -5,10 +5,8 @@ import Category from './components/Category'
 import Sort from './components/Sort'
 import PizzaList from './components/PizzaList'
 
-
-
-
 function App() {
+
 
   return (
     <div className='bg-orange-300 p-10'>
@@ -18,11 +16,22 @@ function App() {
           <Category />
           <Sort />
         </div>
-        <PizzaList pizzas={data} />
+        <div className='mt-10'>
+          <div className='mb-10'><h2 className='font-bold text-3xl'>Все пиццы</h2></div>
+          <div className='grid grid-cols-4 gap-5'>
+            {
+              data.map((pizza) => (
+                <PizzaList key={pizza.id} {...pizza} />
+              ))
+            }
+
+          </div>
+        </div>
+
 
       </div>
 
-    </div>
+    </div >
   )
 }
 

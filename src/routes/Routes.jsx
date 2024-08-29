@@ -6,10 +6,10 @@ import Cart from '../pages/Cart'
 import PageNotFound from '../pages/PageNotFound'
 
 
-export default function AppRouter({ searchInput }) {
+export default function AppRouter() {
     return (
         <Routes>
-            <Route path='/' element={<Home searchInput={searchInput} />} />
+            <Route path='/' element={<Home />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='*' element={<PageNotFound />} />
         </Routes>

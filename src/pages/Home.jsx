@@ -3,15 +3,18 @@ import Category from "../components/Category";
 import Sort from "../components/Sort";
 import PizzaList from "../components/PizzaList";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Sceleton from "../components/Sceleton";
+import { SearchContext } from "../App";
 
-export default function Home({ searchInput }) {
+export default function Home() {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const scelet = Array(8).fill(0);
     const [categoryId, setCategory] = useState(0);
     const [sortId, setSort] = useState(0);
+
+    const { searchInput } = useContext(SearchContext)
 
     function onClickCategoryId(id) {
         setCategory(id);

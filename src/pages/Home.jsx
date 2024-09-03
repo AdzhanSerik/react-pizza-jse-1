@@ -7,6 +7,9 @@ import { useEffect, useState, useContext } from "react";
 import Sceleton from "../components/Sceleton";
 import { SearchContext } from "../App";
 
+
+
+
 export default function Home() {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -14,7 +17,7 @@ export default function Home() {
     const [categoryId, setCategory] = useState(0);
     const [sortId, setSort] = useState(0);
 
-    const { searchInput } = useContext(SearchContext)
+    const { searchInput, setPrice } = useContext(SearchContext)
 
     function onClickCategoryId(id) {
         setCategory(id);
@@ -67,6 +70,7 @@ export default function Home() {
                             .map((pizza) => <PizzaList key={pizza.id} {...pizza} />)}
                 </div>
             </div>
+            <button onClick={() => setPrice(1)}>Нажми на меня</button>
         </>
     );
 }

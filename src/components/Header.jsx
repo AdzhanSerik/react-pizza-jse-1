@@ -11,7 +11,7 @@ export default function Header() {
         navigate(link)
     }
 
-    const { searchInput, setSearchInput } = useContext(SearchContext)
+    const { searchInput, setSearchInput, price } = useContext(SearchContext)
 
 
     return (
@@ -28,7 +28,7 @@ export default function Header() {
                 {searchInput && <span onClick={() => setSearchInput('')} className='cursor-pointer'>X</span>}
             </div>
             <div onClick={() => goToCart('/cart')} className='bg-orange-500 flex gap-3 items-center justify-center py-2 px-6 rounded-full text-white cursor-pointer'>
-                <span className='font-bold'>570 тг</span>
+                <span className='font-bold'>{price} тг</span>
                 <hr className='w-0.5 h-6 bg-orange-300 border-none rounded-xl' />
                 <div>
                     <img src={cart} alt="" />
